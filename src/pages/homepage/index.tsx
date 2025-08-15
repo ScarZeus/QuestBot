@@ -1,7 +1,13 @@
-import React  from "react";
+import React, { useEffect }  from "react";
 import './index.css';
+import { useState } from 'react';
 
 function HomePage(){
+    const[state,setState] = useState("Chennai");
+
+    useEffect(()=>{
+
+    },[])
     return(
         <div className="homepage-grid-split">
             <div className="left">
