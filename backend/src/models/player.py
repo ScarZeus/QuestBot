@@ -2,7 +2,8 @@ from pydantic import BaseModel
 from typing import Optional, List, Dict
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.dialects.postgresql import JSON
-from app.db.database import Base
+from sqlalchemy.ext.mutable import MutableList
+from src.db.database import Base
 
 class PlayerORM(Base):
     __tablename__ = "players"
@@ -13,7 +14,7 @@ class PlayerORM(Base):
     xp = Column(Integer, default=0)
     level = Column(Integer, default=1)
     cluster = Column(String, nullable=True)
-    inventory = Column(JSON, default=[])
+    inventory = Column(MutableList.as_mutable(JSON), default=[])
 
 
 class InventoryItem(BaseModel):

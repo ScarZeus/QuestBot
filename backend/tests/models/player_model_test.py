@@ -2,7 +2,7 @@ import pytest
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from src.db.database import Base
-from app.models.player import PlayerORM
+from src.models.player import PlayerORM
 
 
 DATABASE_URL = "sqlite:///:memory:"
