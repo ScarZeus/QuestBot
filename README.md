@@ -1,69 +1,46 @@
-# React + TypeScript + Vite
+# QuestBot – AI-Powered Text Adventure Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**QuestBot** is an interactive, text-based adventure game that leverages **Natural Language Processing (NLP)**, **Unsupervised Learning**, and **Reinforcement Learning (RL)** to provide a dynamic and adaptive gameplay experience. Players type commands in natural language, and the AI understands, responds, and adapts the story based on the player’s behavior.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔹 Features
 
-## Expanding the ESLint configuration
+- **Supervised Learning (NLP)**
+  - Understands player commands (attack, explore, pick, trade, etc.)  
+  - Uses trained models to map text input to structured actions  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Unsupervised Learning**
+  - Clusters players by behavior patterns (e.g., Aggressive, Explorer, Collector)  
+  - Adapts gameplay based on player cluster  
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Reinforcement Learning**
+  - Adaptive AI Dungeon Master that evolves the game world  
+  - Learns to maximize engagement and challenge based on player actions  
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Backend + Frontend Integration**
+  - Python FastAPI/Flask backend serves ML models and game logic  
+  - React frontend for chat-style gameplay interface  
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Data Persistence**
+  - Stores player sessions, progress, and clustering data in a database  
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🔹 Tech Stack
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Backend**: Python, FastAPI / Flask  
+- **Frontend**: React (Vite)  
+- **NLP & ML**: scikit-learn, HuggingFace Transformers, NumPy, Pandas  
+- **Reinforcement Learning**: Q-Learning / Deep Q-Network (PyTorch optional)  
+- **Database**: PostgreSQL / SQLite  
+- **Deployment**: Docker (optional)  
+
+---
+
+## 🔹 Installation
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/yourusername/NarraAI.git
+cd NarraAI
